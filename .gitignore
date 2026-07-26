@@ -1,0 +1,10 @@
+dist/
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc
+.idea/
+.vscode/
+*.swp
+*~
