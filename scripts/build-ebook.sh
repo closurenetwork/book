@@ -50,8 +50,8 @@ pandoc $FILES "${META[@]}" \
   -V documentclass=book \
   -V fontsize=11pt \
   -V geometry:margin=1.1in \
-  -V mainfont="Palatino" \
-  -V monofont="Menlo" \
+  -V mainfont="$MAINFONT" \
+  -V monofont="$MONOFONT" \
   -V linkcolor=blue \
   -o "$OUT/the-last-application.pdf"
 
