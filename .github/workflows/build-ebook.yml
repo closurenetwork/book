@@ -23,7 +23,13 @@ jobs:
           sudo mv tectonic /usr/local/bin/
           tectonic --version
 
+      - name: Install PDF fonts
+        run: sudo apt-get install -y fonts-dejavu-core fonts-texgyre
+
       - name: Build PDF and EPUB
+        env:
+          MAINFONT: TeX Gyre Pagella
+          MONOFONT: DejaVu Sans Mono
         run: ./scripts/build-ebook.sh
 
       - name: Upload artifacts

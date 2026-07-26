@@ -18,6 +18,10 @@ fi
 # Chapters in reading order (filenames sort correctly).
 FILES=$(ls book/*.md | sort)
 
+
+MAINFONT="${MAINFONT:-Palatino}"
+MONOFONT="${MONOFONT:-Menlo}"
+
 META=(
   --metadata title="The Last Application"
   --metadata subtitle="Semantic applications and the end of the rewrite"
