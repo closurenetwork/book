@@ -75,6 +75,7 @@ The claim: semantic applications are not a feature. They are the fourth paradigm
 | 23 | [Control Plane and Operational Rules](book/23-appendix-control-plane-and-rules.md) |
 | 24 | [The Language of the Graph](book/24-appendix-jsonld-language.md) |
 | 25 | [Composition and Execution in the Concrete](book/25-appendix-composition-execution-concrete.md) |
+| 26 | [First Principles](book/26-appendix-first-principles.md) |
 
 ## Build the ebook locally
 

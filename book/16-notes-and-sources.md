@@ -96,7 +96,7 @@ This book wears its sources in the prose, where they belong, rather than in foot
 
 ## Part V — Technical Appendices
 
-Part V is self-contained public mathematics, architecture, and JSON-LD concrete syntax for the semantic paradigm (state, graph dynamics, process and agentic workflows, pillars, control plane, taxonomy, execution traces). It does not depend on repository paths or internal doc filenames. The worked example is the Closure product described in the main chapters. Definition 18.2 is stated as the **Semantic Closure Criterion** ($F \in R(S)$), not as a theorem of pure mathematics — see the paper draft in this repository’s `papers/` directory for an academic framing.
+Part V is self-contained public mathematics, architecture, and JSON-LD concrete syntax for the semantic paradigm (state, graph dynamics, process and agentic workflows, pillars, control plane, taxonomy, execution traces). It does not depend on repository paths or internal doc filenames. The worked example is the Closure product described in the main chapters. Definition 18.2 is stated as the **Semantic Closure Criterion** ($F \in R(S)$), not as a theorem of pure mathematics — see the paper draft in this repository’s `papers/` directory for an academic framing. Chapter 26 states six first-principle axioms (A1–A6) and points at Goals on the Closure organization as the operational meta-lab.
 
 ## Related Work Matrix
 

@@ -10,6 +10,7 @@ Parts I–IV argue in prose. Part V makes the same claim precise: a formal core,
 | **B — Architecture** | 21–23 | How are those objects stored, pillared, projected, and governed? |
 | **C — Concrete syntax** | 24–25 | What does $G$ look like as JSON-LD, and how does a run actually move? |
 | **D — Thesis** | close of 17 + close of 25 | Why autonomous product evolution was improbable before — and what this book does *not* claim |
+| **E — First principles** | 26 | Six axioms (A1–A6); conjectures toward laws; meta-lab via Goals |
 
 Read A then B then C the first time. After that, Chapter 20 (workflows), Chapter 23 (control plane), and Chapter 25 (execution in the concrete) are the usual return visits.
 
