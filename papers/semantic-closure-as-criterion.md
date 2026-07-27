@@ -61,11 +61,34 @@ Composite novelty: all seven clauses on a **product**, with a **machine reader**
 
 ## 4. Case study: Closure
 
-Closure stores organization product state as JSON-LD–shaped DataObjects (experiences, pages, components, workflows, knowledge, connectors, org events, design tokens, goals/change requests). Write-through evaluates SIV Lite ($I^\circ$ approximating $I$); modes `warn` | `enforce` | `off`. Enforce mode applies hard referential checks. Workflows unify BPM-class control and agentic orchestration (orchestration metadata on agent nodes). Healing and evolution loops open issues and change requests on $G$. IDE and Console split build vs govern under $\mathcal{A}$.
+Closure stores organization product state as JSON-LD–shaped DataObjects. Write-through evaluates SIV Lite ($I^\circ$ approximating $I$); modes `warn` | `enforce` | `off`. Enforce mode applies hard referential checks. Multi-object commits use batch write-through (RAM-upsert then validate) so scaffolds do not fail on forward refs. Deletes emit `graph.object.deleted`. A first semantic-class check rejects raw `#hex` outside `var(--cp-*)` on components/styles. Workflows unify BPM-class control and agentic orchestration. Healing and evolution loops open issues and change requests on $G$. IDE and Console split build vs govern under $\mathcal{A}$.
 
-**Honesty.** Shipping systems may run $I^\circ \le I$; the criterion names the gap. Closing it is engineering, not a new theory.
+**Honesty.** Default mode remains `warn` until production soak under `enforce`. Some bulk seed/pack paths still bypass per-object SIV (documented). Closing those gaps is engineering, not a new theory.
 
-**Evaluation sketch (to complete before submission).** Time-to-governed-change; share of mutations rejected by $I$; event completeness on commit; incident rate from dangling refs before/after enforce; qualitative audit trail review.
+### Structural metrics (repo snapshot, 2026-07)
+
+| Metric | Value | Notes |
+|--------|------:|-------|
+| Lean schema alphabet (`PLATFORM_SCHEMAS`) | 33 | Experience → evolution_recommendation lattice |
+| Integrity classes in SIV Lite | 4 | structural, typing, referential, semantic |
+| Commit modes | 3 | `warn` (default), `enforce`, `off` |
+| Graph audit event kinds (core) | 3 | `graph.object.upserted`, `graph.object.deleted`, `siv.rejected` |
+| Batch commit helper | yes | `writeThroughBatch` for create/merge/scenarios |
+| Book formalization | Part V Ch 17–25 | Criterion $F\in R(S)$, $\delta$, $I$, $W$, JSON-LD |
+
+### Operational metrics (to collect before venue submit)
+
+Instrument in staging/prod under `CLOSURE_SIV_LITE=enforce` for ≥2 weeks:
+
+| Metric | How |
+|--------|-----|
+| SIV reject rate | count `siv.rejected` / count `graph.object.upserted` |
+| Event completeness | upserts with matching org_event within 5s (sample) |
+| Dangling-ref incidents | referential violations in enforce logs |
+| Time-to-governed-change | CR approved → graph commit latency (p50/p95) |
+| Hex-leak catch rate | semantic-class rejects vs brand Issue scanner |
+
+Until those counters ship, §4 claims stay structural + qualitative (worked loops, falsifier, honesty about $I^\circ$).
 
 ---
 
