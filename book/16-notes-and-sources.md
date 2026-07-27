@@ -48,6 +48,7 @@ This book wears its sources in the prose, where they belong, rather than in foot
 - Salesforce's metadata-driven multitenancy: Craig Weissman and Steve Bobrowski, "The Design of the Force.com Multitenant Internet Application Development Platform," *SIGMOD* 2009.
 - Kubernetes: Google, open-sourced June 2014.
 - The author's disclosed position: U.S. Provisional Patent Application No. 63/974,920, filed February 2026 — see the closing note below.
+- Formal grounding of the seven clauses (restated in Part V): representability $F \in R(S)$ and the product graph as source of truth — scoped to what Closure Platform implements. Optional broader physics/AI program in [closurenetwork/books](https://github.com/closurenetwork/books) is not required for Part V.
 
 ## Chapter 4 — The Product Graph
 
@@ -92,6 +93,29 @@ This book wears its sources in the prose, where they belong, rather than in foot
 
 - The bank, its 1974 COBOL accrual program, and the missing binder reprise Chapter 1; see the notes there.
 - FORTRAN as the start of the first era: IBM, 1957.
+
+## Part V — Technical Appendices
+
+Part V is self-contained public mathematics, architecture, and JSON-LD concrete syntax for the semantic paradigm (state, graph dynamics, process and agentic workflows, pillars, control plane, taxonomy, execution traces). It does not depend on repository paths or internal doc filenames. The worked example is the Closure product described in the main chapters. Definition 18.2 is stated as the **Semantic Closure Criterion** ($F \in R(S)$), not as a theorem of pure mathematics — see the paper draft in this repository’s `papers/` directory for an academic framing.
+
+## Related Work Matrix
+
+Where neighboring traditions sit relative to the seven clauses (complete, structured, read, verify, rewrite, governance, while running). “Partial” means the tradition held some clauses strongly and lacked others that this book treats as load-bearing.
+
+| Tradition | Strong clauses | Typical gap vs this book |
+|-----------|----------------|--------------------------|
+| Lisp / Smalltalk | structured, rewrite, while running | governance, enterprise-scale types, distribution |
+| Semantic Web (RDF/OWL/JSON-LD) | structured, (machine) read *of data* | rewrite of a live *product*; governance; a reader that arrived late |
+| HATEOAS | read (process as hypermedia) | complete product substrate; rewrite under gates |
+| ERP metadata / Salesforce | complete, structured (vendor surface) | open product graph; machine rewrite; non-human reader |
+| Model-driven architecture / UML | structured (design-time) | while running — generated side forks |
+| Low-code / RPA | rewrite (limited surface) | complete authoritative description; verify depth |
+| Kubernetes | structured, verify, while running (infra) | product pages/pricing/meaning — wrong domain |
+| Copilots on codebases | read/rewrite *code* | product as governed data; shared $\delta$ / $I$ |
+| Agent frameworks alone | rewrite (tools/chat) | complete typed $G$; verify; governance as SoT |
+| **This book / Closure example** | all seven as one loop | runtime may still approximate $I$ as $I^\circ$ (named honestly) |
+
+The matrix is a map for readers and reviewers, not a claim that every cited system “failed.” Each contributed clauses; the synthesis claim is the closed loop on a product with a machine reader.
 
 ## A Note on the Worked Example
 

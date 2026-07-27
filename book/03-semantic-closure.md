@@ -67,7 +67,7 @@ Throughout the rest of this book I will use one system as the worked example —
 
 One more disclosure belongs here, in the chapter where the flag gets planted. I am not a neutral observer of this idea. In February 2026 I filed a provisional patent application on a system and method implementing it — semantic closure in agentic application development over linked JSON-LD graphs (U.S. Provisional Application No. 63/974,920). I mention it partly for honesty, because you deserve to know that the author of a book arguing for a paradigm holds a position in it, and partly because the filing says something the prose cannot: I have put this claim in front of the one reader who is professionally required to be unimpressed. To be precise about what that means: the property itself — the definition this chapter just built — is an idea, and ideas are not ownable. The application covers one method of achieving it. The four requirements above remain exactly as available to you as I said they were.
 
-The loop can close now. What remains is to show, concretely and from the ground, what it takes to close it — and that begins with the substrate, which is the subject of the next chapter.
+The loop can close now. What remains is to show, concretely and from the ground, what it takes to close it — and that begins with the substrate, which is the subject of the next chapter. Readers who want the algebra and the worked runtime floor plan after finishing the main argument can turn to Part V — Technical Appendices.
 
 ## The point
 

@@ -62,6 +62,20 @@ The claim: semantic applications are not a feature. They are the fourth paradigm
 | 15 | [The Last Application](book/15-the-last-application.md) |
 | — | [Notes and Sources](book/16-notes-and-sources.md) |
 
+### Part V — Technical Appendices
+
+| # | Chapter |
+|---|---------|
+| 17 | [How to Read These Appendices](book/17-appendix-how-to-read.md) |
+| 18 | [Semantic State and Representability](book/18-appendix-semantic-state-and-representability.md) |
+| 19 | [Graph Dynamics and Integrity](book/19-appendix-graph-sal-sas-siv.md) |
+| 20 | [Workflows: Process, Agentic, and Hybrid](book/20-appendix-composition-and-workflows.md) |
+| 21 | [Substrate and Taxonomy](book/21-appendix-substrate-and-taxonomy.md) |
+| 22 | [Pillars and Projections](book/22-appendix-pillars-and-projections.md) |
+| 23 | [Control Plane and Operational Rules](book/23-appendix-control-plane-and-rules.md) |
+| 24 | [The Language of the Graph](book/24-appendix-jsonld-language.md) |
+| 25 | [Composition and Execution in the Concrete](book/25-appendix-composition-execution-concrete.md) |
+
 ## Build the ebook locally
 
 Requires [pandoc](https://pandoc.org/) and [tectonic](https://tectonic-typesetting.github.io/) (`brew install pandoc tectonic`).
@@ -85,6 +99,9 @@ Cover art: [`assets/cover.png`](./assets/cover.png).
 | **IDE** | [`npx @closurenetwork/ide`](https://www.npmjs.com/package/@closurenetwork/ide) |
 | **Whitepaper** | [closureapps.com/whitepaper](https://closureapps.com/whitepaper) |
 | **Foundational ontology** | [closurenetwork/books](https://github.com/closurenetwork/books) (theory volumes — separate from this narrative) |
+| **Whole-book audit** | [`_audit/2026-07-whole-book-audit.md`](./_audit/2026-07-whole-book-audit.md) — novelty, rigor, consistency |
+| **SE paper draft** | [`papers/semantic-closure-as-criterion.md`](./papers/semantic-closure-as-criterion.md) — short systems/SE sketch |
+| **Part V scope note** | [`_audit/2026-07-part-v-first-principles.md`](./_audit/2026-07-part-v-first-principles.md) — Platform projection; no spectral χ |
 
 ## Patent notice
 

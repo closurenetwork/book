@@ -44,7 +44,7 @@ What I **am** claiming is this: the fourth paradigm of enterprise software is th
 
 ---
 
-The book runs in four parts.
+The book runs in four narrative parts, plus technical appendices.
 
 **Part I — The Weight of Code** is the history. Where the application-as-artifact came from, why it rots, and why fifty years of attempted escapes — CASE tools, UML, model-driven architecture, low-code, RPA, copilots — each attacked a symptom and left the disease alone. If you have ever inherited a codebase, this part will read less like history and more like biography.
 
@@ -53,6 +53,8 @@ The book runs in four parts.
 **Part III — The Living Application** is what the closed loop actually does. Governance as the precondition for everything else. The healing loop: how an application scans itself, opens issues against itself, and repairs what policy allows. The evolution loop: how stakeholder intent becomes a reviewed, executable work order rather than a wish in a backlog. And authorship: what it means when humans and AI agents are both first-class principals of the same product, working through the same gates.
 
 **Part IV — The World After Code** follows the mechanism to its conclusions. What happens to the economics of software when maintenance stops being a cost that compounds against you. What an enterprise looks like when its operations are legible to its own intelligence. And what "the last application" finally means — for the industry, and for the people who build things in it.
+
+**Part V — Technical Appendices** restates the same argument as a formal criterion, an architecture, and JSON-LD concrete syntax — for readers who want the multiplication table after the prose. Skip it on a first read if you prefer; return when you want equations and a worked graph.
 
 ---
 
