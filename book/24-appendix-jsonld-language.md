@@ -56,6 +56,7 @@ Schemas are themselves names in a finite alphabet $\Sigma$. The lean product lat
 | Governance | `schema:issue` | Judgment opened by a gate/workflow |
 | Governance | `schema:goal` | Evolution attractor |
 | Governance | `schema:change_request` | Executable work order |
+| Governance | `schema:policy` | Authorization: Principal × Action × Resource × Condition → Effect (Ch 23) |
 | Quality | `schema:test` / `schema:test_run` | Semantic tests |
 
 Pillars from Chapter 21 are covers over these families — not separate databases.
@@ -188,6 +189,69 @@ The following document is a **toy** org: one Experience with a home page, a hybr
 ```
 
 Read it as $G$: the experience points at a page; the page points at a component; the experience points at a workflow ref; the ref points at a workflow; knowledge chunks point at sources; the event points at the experience. The empty `nodes` / `edges` arrays are filled in Chapter 25 — same object, richer $W$.
+
+## Policies on $G$ (Chapter 23)
+
+Authorization is not a sidecar config file. A Policy is a DataObject; $\mathsf{PDP}$ reads active rows. Minimal shapes:
+
+```json
+{
+  "@id": "urn:uuid:66666666-6666-4666-8666-666666666601",
+  "@type": "schema:policy",
+  "schemaRef": "schema:policy",
+  "name": "Builders write Experiences on Dev",
+  "state": "active",
+  "data": {
+    "name": "Builders write Experiences on Dev",
+    "effect": "allow",
+    "priority": 100,
+    "actions": ["graph.write"],
+    "principals": { "kinds": ["human"], "roles": ["builder", "admin", "owner"] },
+    "resources": { "envs": ["dev", "personal"], "pillars": ["experiences"] },
+    "conditions": { "mcpIde": true },
+    "bootstrap": true
+  }
+}
+```
+
+```json
+{
+  "@id": "urn:uuid:66666666-6666-4666-8666-666666666602",
+  "@type": "schema:policy",
+  "schemaRef": "schema:policy",
+  "name": "Agents may not promote Prod",
+  "state": "active",
+  "data": {
+    "name": "Agents may not promote Prod",
+    "effect": "deny",
+    "priority": 1000,
+    "actions": ["promote.pin", "promote.approve"],
+    "principals": { "kinds": ["agent"] },
+    "resources": { "envs": ["prod"] }
+  }
+}
+```
+
+```json
+{
+  "@id": "urn:uuid:66666666-6666-4666-8666-666666666603",
+  "@type": "schema:policy",
+  "schemaRef": "schema:policy",
+  "name": "Prod promote requires human + window",
+  "state": "active",
+  "data": {
+    "name": "Prod promote requires human + window",
+    "effect": "require_human",
+    "priority": 500,
+    "actions": ["promote.approve"],
+    "principals": { "kinds": ["human"], "roles": ["admin", "owner"] },
+    "resources": { "envs": ["prod"] },
+    "conditions": { "minApprovers": 2, "changeWindow": true, "qualityGate": "blocking_issues" }
+  }
+}
+```
+
+Effect order: deny > require_human > allow. Unmatched write-class actions fail closed (Axiom 23.3).
 
 ## Composability in the concrete
 

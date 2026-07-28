@@ -29,7 +29,9 @@ Read A then B then C the first time. After that, Chapter 20 (workflows), Chapter
 | $W = (N, A, \kappa, \mu)$ | Workflow graph: nodes, arcs, kind map, metadata |
 | $\rho$ | Run state of a workflow instance |
 | $\pi$ | A projection $G \to$ view (Experience, API, IDE tree, …) |
-| $\mathcal{A}$ | Set of admissible operators (role × environment × pillar) |
+| $\mathcal{A}$ | Set of admissible operators from $\mathsf{PDP}(\Pi)$ (Ch 23) |
+| $\Pi$ | Active `schema:policy` documents on $G$ |
+| $\mathsf{PDP}$ | Policy Decision Point: request → effect |
 | `@graph` | JSON-LD document array realizing a finite piece of $G$ |
 
 Inline math uses single dollars; displays use double dollars. JSON examples use fenced code blocks.

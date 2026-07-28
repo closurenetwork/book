@@ -30,9 +30,9 @@ Autonomy is not the absence of gates. Without $I$, rewrite is fire. Runtime may 
 **Axiom A4 (Governance is constitutive).**  
 Only operators in the admissible set may propose commits that the organization treats as product evolution:
 
-$$\mathcal{O} \in \mathcal{A}(c) \quad\text{for context } c \text{ (role, environment, pillar)}.$$
+$$\mathcal{O} \in \mathcal{A}(c) \quad\text{for context } c = (p,\, e,\, \mathsf{role},\, \mathsf{kind},\, \mathsf{caps}).$$
 
-$\mathcal{A}$ is not bureaucracy bolted on afterward. It is what makes power grantable to humans and machines alike.
+$\mathcal{A}(c)$ is computed from active Policies $\Pi$ by a single $\mathsf{PDP}$ (Chapter 23): deny dominates; write-class actions fail closed; humans, agents, and services are distinct principals. Integrity $I$ remains separate. $\mathcal{A}$ is not bureaucracy bolted on afterward — it is what makes power grantable to humans and machines alike, and what contains both when they go rogue.
 
 **Axiom A5 (Completeness of the product facet set).**  
 Let $\mathcal{P}$ be the facets the organization treats as first-class product. Descriptive completeness (Definition 18.6) requires a surjective assignment $\Phi: \mathcal{P} \twoheadrightarrow \mathsf{Parts}(G)$ such that runtime behavior attributed to each $p \in \mathcal{P}$ is a function of $\Phi(p)$ and $X$ alone. Partial models lose; second descriptions lose.
