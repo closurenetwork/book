@@ -26,7 +26,7 @@ with capabilities including an MCP/IDE flag.
 
 $$\mathcal{A}(c) \subseteq \mathsf{Operators}$$
 
-is the set of operators actor may invoke on $G_e$. Pillar matrices restrict write vs read per pillar; viewers typically have $\mathcal{A}$ empty for write operators.
+is the set of operators actor may invoke on $G_e$. In the worked example, $\mathcal{A}(c)$ is computed from active `schema:policy` documents (deny $>$ require_human $>$ allow) over Principal × Action × Resource × Condition. Bootstrap Policies encode the historical role×pillar matrix; orgs may refine further. Viewers typically have $\mathcal{A}$ empty for write operators.
 
 **Axiom 23.1 (No ungated prod craft).** Direct write operators on $G_{\mathsf{Prod}}$ lie outside $\mathcal{A}$ for ordinary builders. Production changes enter through promote (below).
 
